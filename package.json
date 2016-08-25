@@ -1,6 +1,6 @@
 {
   "name": "react-svg-gauge",
-  "version": "1.0.4.1",
+  "version": "1.0.4",
   "description": "Original author Tim de Koning. Justgage inspired .svg gauge for React. This is customized version of react-svg-gauge. I added gradient color fill and value label adjustment.",
   "author": "Haider Mahmood",
   "user": "haidermahmood",
