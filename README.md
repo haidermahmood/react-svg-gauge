@@ -1,4 +1,4 @@
-React SVG Gauge
+FORK of original React SVG Gauge(https://reggino.github.io/react-svg-gauge) by Tim de Koning https://github.com/Reggino
 =====
 
 Simple SVG Gauge component, inspired by [JustGage](http://JustGage.com)
@@ -8,8 +8,6 @@ Demo
 
 ![Sample Gauge](https://reggino.github.io/react-svg-gauge/example.png)
 
-https://reggino.github.io/react-svg-gauge
- 
  
 Sample implementation
 -----
