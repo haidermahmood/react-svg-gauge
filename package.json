@@ -1,5 +1,5 @@
 {
-  "name": "react-svg-gauge-custom-haidermahmood",
+  "name": "react-svg-gauge-fork-custom",
   "version": "1.0.0",
   "description": "Original author Tim de Koning. Justgage inspired .svg gauge for React. This is customized version of react-svg-gauge. I added gradient color fill and value label adjustment.",
   "author": "Haider Mahmood",
