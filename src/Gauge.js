@@ -87,10 +87,10 @@ export default class Gauge extends Component {
 				labelX = midX + sign * Math.sqrt(Math.pow(labelRadius, 2)/(1 + Math.pow(m, 2)));
 				labelY = m * (labelX - midX) + Cy;
 			}			
-			
+			var valuesNotSet = isNaN(labelX) || isNaN(labelY);
 		
 		return (
-				<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" style={{width: this.props.width, height: this.props.height, overflow: 'hidden', position: 'relative', left: 0, top: 0}}>
+				<svg height="100%" version="1.1" width="100%" style={{width: this.props.width, height: this.props.height, overflow: 'hidden', position: 'relative', left: 0, top: 0}}>					
 					<defs>
 						<filter id="g3-inner-shadow">
 							<feOffset dx="0" dy="3" />
@@ -114,9 +114,12 @@ export default class Gauge extends Component {
 					<text x={this.props.width / 2} y={this.props.height / 8} textAnchor="middle" style={topLabelStyle}>
 						{ this.props.label }
 					</text>
-					<text x={labelX} y={labelY} textAnchor="middle" style={this.props.valueLabelStyle}>
-						{ this.props.value }
-					</text>
+					{ !valuesNotSet ? 
+						<text x={labelX} y={labelY} textAnchor="middle" style={this.props.valueLabelStyle}>
+							{ this.props.value }
+						</text>
+						: null
+					}
 					<text x={(Cx - Ro + (Cx - Ri)) / 2 + 45} y={Cy + 3} textAnchor="middle" style={this.props.minMaxLabelStyle}>
 						{this.props.min}
 					</text>
@@ -129,7 +132,7 @@ export default class Gauge extends Component {
 					<text x={midObject.Xo} y={midObject.Yo - 15} textAnchor="middle" style={this.props.minMaxLabelStyle}>
 						{midValue}
 					</text>
-				</svg>
+				</svg>		
 		);
 	}
 }
