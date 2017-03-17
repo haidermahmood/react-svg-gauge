@@ -87,6 +87,10 @@ export default class Gauge extends Component {
 				labelX = midX + sign * Math.sqrt(Math.pow(labelRadius, 2)/(1 + Math.pow(m, 2)));
 				labelY = m * (labelX - midX) + Cy;
 			}			
+			else {
+				labelX = midX + sign * Math.sqrt(Math.pow(labelRadius, 2) / (1 + Math.pow(m, 2))) + 5;
+				labelY = m * (labelX - midX) + Cy + 2;	
+			}
 			var valuesNotSet = isNaN(labelX) || isNaN(labelY);
 		
 		return (
